@@ -64,7 +64,14 @@ $ sudo pip3 install coverage
 $ coverage --version
 ```
 
+5.Run python with coverage
+```shell
 
+```
+
+```shell
+
+```
 *Install nose
 ```shell
 $ sudo apt install python3-pip
