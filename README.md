@@ -105,10 +105,12 @@ setup the admin user data
 setup the url for jenkins
 
 9.Install Jenkins plugin
+
 Cobertura
 Violations
 
 10.Add new item
+
 Select FreeStyle project
 Choose Source Code Management and select git
 Fill your github url 
@@ -127,4 +129,5 @@ Report Violations fill pylint.out in pylint
 save
 
 11.Build Jenkins
+
 Build now and see the report
