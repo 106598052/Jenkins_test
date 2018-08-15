@@ -78,6 +78,12 @@ $ pip install --upgrade pip
 $ pip3 install nose
 ```
 
+7.Install git
+```shell
+$ sudo add-apt-repository ppa:git-core/ppa
+$ sudo apt-get install git
+```
+
 7.Install java 8
 ```shell
 $ sudo add-apt-repository ppa:webupd8team/java
