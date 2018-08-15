@@ -61,6 +61,7 @@ $ sudo python calculator_test.py
 ```shell
 $ sudo apt install python3-pip
 $ sudo pip3 install coverage
+$ sudo apt install python-pip
 $ coverage --version
 ```
 
@@ -73,8 +74,8 @@ $ coverage report -m
 6.Install nose
 ```shell
 $ sudo apt install python3-pip
-$ pip install nose
 $ pip install --upgrade pip
+$ pip3 install nose
 ```
 
 7.Install java 8
@@ -131,3 +132,7 @@ save
 11.Build Jenkins
 
 Build now and see the report
+
+**Change Jenkins language
+install plugin Locale
+fill zh_tw in Default Language
