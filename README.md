@@ -70,7 +70,14 @@ $ coverage run calculator_test.py
 $ coverage report -m
 ```
 
-6.Install java 8
+6.Install nose
+```shell
+$ sudo apt install python3-pip
+$ pip install nose
+$ pip install --upgrade pip
+```
+
+7.Install java 8
 ```shell
 $ sudo add-apt-repository ppa:webupd8team/java
 $ sudo apt-get update
@@ -78,7 +85,7 @@ $ sudo apt-get install oracle-java8-installer
 $ java -version
 ```
 
-7.Install Jenkins
+8.Install Jenkins
 ```shell
 $ wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
 **remember the key might be change
@@ -93,16 +100,31 @@ $ ifconfig
 $ sudo more /var/lib/jenkins/secrets/initialAdminPassword
 $ firefox localhost:8080/
 ```
+copy the password and paste on the jenkins
+setup the admin user data
+setup the url for jenkins
 
+9.Install Jenkins plugin
+Cobertura
+Violations
 
-
-*Install nose
-```shell
-$ sudo apt install python3-pip
-$ pip install nose
-$ pip install --upgrade pip
+10.Add new item
+Select FreeStyle project
+Choose Source Code Management and select git
+Fill your github url 
+Choose Build Environment and select Delete workspace before build starts
+Choose Build and select Execute shell
+write
 ```
-
-```shell
-
+nosetests --with-xunit --all-modules --traverse-namespace --with-coverage --cover-package=project1 --cover-inclusive
+python -m coverage xml --include=project1*
+pylint -f parseable -d I0011,R0801 project1 | tee pylint.out
 ```
+Choose Add post-build action
+Publish Cobertura Coverage Report fill in coverage.xml
+Publish JUnit test result report fill in nosetests.xml
+Report Violations fill pylint.out in pylint
+save
+
+11.Build Jenkins
+Build now and see the report
