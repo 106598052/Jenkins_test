@@ -62,7 +62,7 @@ setup the admin user data
 
 setup the url for jenkins
 
-9.Install Jenkins plugin
+## 9.Install Jenkins plugin
 
 Cobertura and Violations
 
@@ -101,14 +101,14 @@ Build now and see the report
 
 
 
-## Install Python3.6
+### Install Python3.6
 ```shell
 $ sudo add-apt-repository ppa:jonathonf/python-3.6
 $ sudo apt-get update
 $ sudo apt-get install python3.6
 ```
 
-## Change the verison of Python
+### Change the verison of Python
 ```shell
 $ python --version
 $ sudo rm /usr/bin/python
@@ -116,7 +116,7 @@ $ sudo ln -s /usr/bin/python3.6 /usr/bin/python
 $ python --version
 ```
 
-## Execute python
+### Execute python
 ```shell
 $ mkdir test
 $ cd test
@@ -152,7 +152,7 @@ unittest.main(verbosity=2)
 $ sudo python calculator_test.py
 ```
 
-## Change Jenkins language
+### Change Jenkins language
 
 install plugin Locale
 
