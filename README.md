@@ -33,7 +33,12 @@ $ sudo apt-get install oracle-java8-installer
 $ java -version
 ```
 
-## 6.Install Jenkins
+## 6.Install Pylint
+```shell
+sudo apt-get install pylint
+```
+
+## 7.Install Jenkins
 ```shell
 $ wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
 **remember the key might be change
@@ -43,14 +48,14 @@ $ sudo apt-get install jenkins
 $ sudo service jenkins start
 ```
 
-## 7.Install gradle
+## 8.Install gradle
 ```shell
 $ sudo add-apt-repository ppa:cwchien/gradle
 $ sudo apt-get update
 $ sudo apt-get install gradle
 ```
 
-## 8.Open Jenkins
+## 9.Open Jenkins
 ```shell
 $ ifconfig
 $ sudo more /var/lib/jenkins/secrets/initialAdminPassword
@@ -62,11 +67,11 @@ setup the admin user data
 
 setup the url for jenkins
 
-## 9.Install Jenkins plugin
+## 10.Install Jenkins plugin
 
 Cobertura and Violations
 
-## 10.Add New Item
+## 11.Add New Item
 
 Select FreeStyle project
 
@@ -80,6 +85,7 @@ Choose Build and select Execute shell
 
 write
 ```shell
+pip install mock
 nosetests --with-xunit --all-modules --traverse-namespace --with-coverage --cover-package=project1 --cover-inclusive
 python -m coverage xml --include=project1*
 pylint -f parseable -d I0011,R0801 project1 | tee pylint.out
@@ -95,7 +101,7 @@ Report Violations fill pylint.out in pylint
 
 save
 
-## 11.Build Jenkins
+## 12.Build Jenkins
 
 Build now and see the report
 
