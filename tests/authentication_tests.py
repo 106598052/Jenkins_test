@@ -12,13 +12,12 @@ class StandAloneTests(TestCase):
         """Test the login function when things go right."""
         mock_open.return_value.read.return_value = "george|bosco"
         self.assertTrue(auth.login('george', 'bosco'))
-    '''
     @patch('__builtin__.open')
     def test_login_bad_creds(self, mock_open):
         """Test the login function when bad creds are passed."""
         mock_open.return_value.read.return_value = "george|bosco"
         self.assertFalse(auth.login('george', 'marbleRye'))
-
+    '''
     @patch('__builtin__.open')
     def test_login_error(self, mock_open):
         """Test the login function when an error happens."""
